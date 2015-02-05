@@ -39,24 +39,58 @@
 	[super tearDown];
 }
 
-/**
 - (void)testServicesOfTypeInDomain {
     __block RACSequence *services = nil;
 	[[NSNetService rns_servicesOfType:type inDomain:@"local"]
     subscribeNext:^(RACSequence *_services_) {
         services = _services_;
     }];
-    NDD_TEST_WAIT_UNTIL_TRUE(services.array.count == 1)
-    NDD_TEST_EQUAL_OBJECTS([services.head name], @"Test")
+
+    XCTestExpectation *expectation1 = [self expectationWithDescription:@"service seen"];
+    [[[NSNetService rns_servicesOfType:type inDomain:@"local"]
+    takeUntilBlock:^BOOL(RACSequence *_services_) {
+        return _services_.array.count == 1 && [[_services_.head name] isEqualToString:@"Test"];
+    }]
+    subscribeCompleted:^{
+        [expectation1 fulfill];
+    }];
+    [self waitForExpectationsWithTimeout:5.0 handler:nil];
+
     [server stop];
-    NDD_TEST_WAIT_UNTIL_TRUE(services.array.count == 0)
+    XCTestExpectation *expectation2 = [self expectationWithDescription:@"service removed"];
+    [[[NSNetService rns_servicesOfType:type inDomain:@"local"]
+    takeUntilBlock:^BOOL(RACSequence *_services_) {
+        return _services_.array.count == 0;
+    }]
+    subscribeCompleted:^{
+        [expectation2 fulfill];
+    }];
+    [self waitForExpectationsWithTimeout:5.0 handler:nil];
+
     [server publish];
-    NDD_TEST_WAIT_UNTIL_TRUE(services.array.count == 1)
-    NDD_TEST_EQUAL_OBJECTS([services.head name], @"Test")
+    XCTestExpectation *expectation3 = [self expectationWithDescription:@"service seen"];
+    [[[NSNetService rns_servicesOfType:type inDomain:@"local"]
+    takeUntilBlock:^BOOL(RACSequence *_services_) {
+        return _services_.array.count == 1 && [[_services_.head name] isEqualToString:@"Test"];
+    }]
+    subscribeCompleted:^{
+        [expectation3 fulfill];
+    }];
+    [self waitForExpectationsWithTimeout:5.0 handler:nil];
+
     [server stop];
-    NDD_TEST_WAIT_UNTIL_TRUE(services.array.count == 0)
-    [server publish];
+    XCTestExpectation *expectation4 = [self expectationWithDescription:@"service removed"];
+    [[[NSNetService rns_servicesOfType:type inDomain:@"local"]
+    takeUntilBlock:^BOOL(RACSequence *_services_) {
+        return _services_.array.count == 0;
+    }]
+    subscribeCompleted:^{
+        [expectation4 fulfill];
+    }];
+    [self waitForExpectationsWithTimeout:5.0 handler:nil];
 }
+
+/**
 
 - (void)testResolvedServicesOfTypeInDomain {
     __block RACSequence *services = nil;
@@ -99,38 +133,34 @@
     NDD_TEST_WAIT_UNTIL_TRUE(services.array.count == 0)
     [server publish];
 }
+*/
 
 - (void)testErrorInServicesOfTypeInDomain {
-    __block NSError *error = nil;
+    XCTestExpectation *expectation = [self expectationWithDescription:@"error returned"];
 	[[NSNetService rns_servicesOfType:@"invalidServiceType" inDomain:@"local"]
     subscribeNext:^(RACSequence *_services_) {
-        XCTAssertNil(_services_.head)
+        XCTAssertNil(_services_.head);
     } error:^(NSError *_error_) {
-        error = _error_;
+        XCTAssertEqualObjects(_error_.domain, NSURLErrorDomain);
+        [expectation fulfill];
     }];
-    NDD_TEST_WAIT_UNTIL_TRUE(error != nil)
-    NDD_TEST_EQUAL_OBJECTS(error.domain, NSStringFromClass([NSNetService class]))
+    [self waitForExpectationsWithTimeout:50.0 handler:nil];
 }
 
 - (void)netService:(NSNetService *)netService didNotPublish:(NSDictionary *)errorDictionary {
-    XCTFail(@"Failed to publish service: %@", RNSErrorForErrorDictionary(errorDictionary))
+    XCTFail(@"Failed to publish service: %@", RNSErrorForErrorDictionary(errorDictionary));
 }
 
 - (void)netServiceWillPublish:(NSNetService *)netService {
-    NDD_TRACE_ENTRY
-    NDD_TRACE_OBJECT(_netService)
-    NDD_ASSERT(_netService)
-    DTSLog(@"Service will publish: %@", _netService);
-    NDD_TRACE_EXIT
+    NSLog(@"Service will publish: %@", netService);
 }
 
 - (void)netServiceDidPublish:(NSNetService *)netService {
-    NSLog(@"Service did publish: %@", _netService);
+    NSLog(@"Service did publish: %@", netService);
 }
 
 - (void)netServiceDidStop:(NSNetService *)netService {
-    NSLog(@"Service did stop: %@", _netService);
+    NSLog(@"Service did stop: %@", netService);
 }
-*/
 
 @end
