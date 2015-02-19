@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         		= "ReactiveNetService"
-  s.version      		= "1.0.0"
+  s.version      		= "1.0.1"
   s.summary      		= "Additions to the NSNetService/NSNetServiceBrowser ecosystem for greater interoperability with ReactiveCocoa."
   s.description  		= <<-DESC
 					Additions to the NSNetService/NSNetServiceBrowser ecosystem for greater 
@@ -17,9 +17,9 @@ Pod::Spec.new do |s|
   s.author             		= { "Nathan Douglas" => "ndouglas@devontechnologies.com" }
   s.ios.deployment_target 	= "7.0"
   s.osx.deployment_target 	= "10.8"
-  s.source       		= { :git => "https://github.com/ndouglas/ReactiveNetService.git", :tag => "1.0.0" }
+  s.source       		= { :git => "https://github.com/ndouglas/ReactiveNetService.git", :tag => "1.0.1" }
   s.source_files  		= "*.{h,m}"
-  s.exclude_files 		= "*.Tests.m""
+  s.exclude_files 		= "*.Tests.m"
   s.framework			= "Foundation"
   s.dependency			"ReactiveCocoa"
 end
