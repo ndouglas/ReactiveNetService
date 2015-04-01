@@ -9,6 +9,7 @@
 
 #import <XCTest/XCTest.h>
 #import "ReactiveNetService.h"
+#import <ReactiveCocoa/ReactiveCocoa.h>
 
 @interface NSNetService_ReactiveNetServiceTests : XCTestCase <NSNetServiceDelegate> {
 }

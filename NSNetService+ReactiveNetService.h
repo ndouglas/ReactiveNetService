@@ -9,6 +9,12 @@
 
 #import "RNSDefinitions.h"
 
+@class RACSignal;
+
+/**
+ Additions to NSNetService.
+ */
+
 @interface NSNetService (ReactiveNetService)
 
 /**

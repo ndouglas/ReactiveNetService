@@ -11,6 +11,8 @@
 #import "ReactiveNetService.h"
 #import "RNSNetServiceBrowserDelegate.Private.h"
 #import "RNSNetServiceDelegate.Private.h"
+#import <ReactiveCocoa/ReactiveCocoa.h>
+
 #import <objc/runtime.h>
 
 static void *RNSNetServiceTXTRecordDictionaryKey = &RNSNetServiceTXTRecordDictionaryKey;

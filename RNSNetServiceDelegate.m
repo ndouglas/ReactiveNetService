@@ -9,6 +9,7 @@
 
 #import "RNSNetServiceDelegate.Private.h"
 #import "ReactiveNetService.h"
+#import <ReactiveCocoa/ReactiveCocoa.h>
 
 @implementation RNSNetServiceDelegate
 @synthesize resolutionSubject;

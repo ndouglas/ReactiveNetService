@@ -10,6 +10,7 @@
 #import "RNSNetServiceBrowserDelegate.Private.h"
 #import "ReactiveNetService.h"
 #import <objc/runtime.h>
+#import <ReactiveCocoa/ReactiveCocoa.h>
 
 static void *RNSNetServiceBrowserDelegateKey = &RNSNetServiceBrowserDelegateKey;
 
