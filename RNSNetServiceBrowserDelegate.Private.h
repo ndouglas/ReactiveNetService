@@ -9,8 +9,6 @@
 
 #import "RNSNetServiceBrowserDelegate.h"
 
-@class RACReplaySubject;
-
 @interface RNSNetServiceBrowserDelegate () {
     RACReplaySubject *subject;
     NSMutableArray *services;

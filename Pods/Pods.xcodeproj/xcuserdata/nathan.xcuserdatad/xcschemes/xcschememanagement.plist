@@ -9,12 +9,22 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Pods-ReactiveNetService-YOLOKit.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-ReactiveNetService.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
 		<key>Pods-ReactiveNetServiceTests-ReactiveCocoa.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-ReactiveNetServiceTests-YOLOKit.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -27,22 +37,32 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>11B6508E3E0B1E2ABCE3678F</key>
+		<key>1744A1B7FB209B7EA66E8845</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>2C49FD4CF2BE50A6EF86E707</key>
+		<key>4EA0890B423EAC02CD134DA6</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>9179B64AC74FA34DE2E6E398</key>
+		<key>602F848EC4D6AE784A8CCEF4</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>E37F4C0AA3D47785EFC88917</key>
+		<key>ACE42B74307AB0620B66A335</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>C3965ADB417DAFF0EA29DD8C</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>C45DBA3750B4795D76B998B3</key>
 		<dict>
 			<key>primary</key>
 			<true/>

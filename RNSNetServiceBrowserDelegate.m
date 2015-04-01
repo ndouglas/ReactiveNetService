@@ -10,7 +10,6 @@
 #import "RNSNetServiceBrowserDelegate.Private.h"
 #import "ReactiveNetService.h"
 #import <objc/runtime.h>
-#import <ReactiveCocoa/ReactiveCocoa.h>
 
 static void *RNSNetServiceBrowserDelegateKey = &RNSNetServiceBrowserDelegateKey;
 
@@ -33,14 +32,14 @@ static void *RNSNetServiceBrowserDelegateKey = &RNSNetServiceBrowserDelegateKey;
     objc_setAssociatedObject(netService, RNSNetServiceBrowserDelegateKey, delegate, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
     [self.services addObject:netService];
     if (!moreComing) {
-        [self.subject sendNext:self.services.rac_sequence];
+        [self.subject sendNext:self.services.copy];
     }
 }
 
 - (void)netServiceBrowser:(NSNetServiceBrowser *)browser didRemoveService:(NSNetService *)netService moreComing:(BOOL)moreComing {
     [self.services removeObject:netService];
     if (!moreComing) {
-        [self.subject sendNext:self.services.rac_sequence];
+        [self.subject sendNext:self.services.copy];
     }
 }
 

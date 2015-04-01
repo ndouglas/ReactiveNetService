@@ -9,8 +9,6 @@
 
 #import "RNSDefinitions.h"
 
-@class RACSignal;
-
 /**
  Additions to NSNetService.
  */
@@ -34,7 +32,7 @@
  
  @param type The type of the services to search for.
  @param domain The domain of the services to search for.
- @return A signal of RACSequence objects containing discovered services.
+ @return A signal of NSArray objects containing discovered services.
  */
 
 + (RACSignal *)rns_resolvedServicesWithTXTRecordsOfType:(NSString *)type inDomain:(NSString *)domain;
@@ -44,7 +42,7 @@
  
  @param type The type of the services to search for.
  @param domain The domain of the services to search for.
- @return A signal of RACSequence objects containing discovered services.
+ @return A signal of NSArray objects containing discovered services.
  */
 
 + (RACSignal *)rns_resolvedServicesOfType:(NSString *)type inDomain:(NSString *)domain;
@@ -54,7 +52,7 @@
  
  @param type The type of the services to search for.
  @param domain The domain of the services to search for.
- @return A signal of RACSequence objects containing discovered services.
+ @return A signal of NSArray objects containing discovered services.
  */
 
 + (RACSignal *)rns_servicesOfType:(NSString *)type inDomain:(NSString *)domain;

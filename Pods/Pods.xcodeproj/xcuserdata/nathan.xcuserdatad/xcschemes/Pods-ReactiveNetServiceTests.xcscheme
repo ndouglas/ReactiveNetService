@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "2C49FD4CF2BE50A6EF86E707"
+               BlueprintIdentifier = "602F848EC4D6AE784A8CCEF4"
                BuildableName = "libPods-ReactiveNetServiceTests.a"
                BlueprintName = "Pods-ReactiveNetServiceTests"
                ReferencedContainer = "container:Pods.xcodeproj">

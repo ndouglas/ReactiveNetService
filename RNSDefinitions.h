@@ -8,6 +8,8 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <ReactiveCocoa/ReactiveCocoa.h>
+#import "YOLO.h"
 
 /**
  Returns an error constructed from an error dictionary.

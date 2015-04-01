@@ -9,8 +9,6 @@
 
 #import "RNSNetServiceDelegate.h"
 
-@class RACSubject;
-
 @interface RNSNetServiceDelegate () {
     RACSubject *resolutionSubject;
     BOOL resolved;

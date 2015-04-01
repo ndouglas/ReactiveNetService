@@ -47,16 +47,16 @@
 }
 
 - (void)testServicesOfTypeInDomain {
-    __block RACSequence *services = nil;
+    __block NSArray *services = nil;
 	[[NSNetService rns_servicesOfType:self.type inDomain:@"local"]
-    subscribeNext:^(RACSequence *_services_) {
+    subscribeNext:^(NSArray *_services_) {
         services = _services_;
     }];
 
     XCTestExpectation *expectation1 = [self expectationWithDescription:@"service seen"];
     [[[NSNetService rns_servicesOfType:self.type inDomain:@"local"]
-    takeUntilBlock:^BOOL(RACSequence *_services_) {
-        return _services_.array.count == 1 && [[_services_.head name] isEqualToString:self.name];
+    takeUntilBlock:^BOOL(NSArray *_services_) {
+        return _services_.count == 1 && [[_services_.firstObject name] isEqualToString:self.name];
     }]
     subscribeCompleted:^{
         [expectation1 fulfill];
@@ -66,8 +66,8 @@
     [self.server stop];
     XCTestExpectation *expectation2 = [self expectationWithDescription:@"service removed"];
     [[[NSNetService rns_servicesOfType:self.type inDomain:@"local"]
-    takeUntilBlock:^BOOL(RACSequence *_services_) {
-        return _services_.array.count == 0;
+    takeUntilBlock:^BOOL(NSArray *_services_) {
+        return _services_.count == 0;
     }]
     subscribeCompleted:^{
         [expectation2 fulfill];
@@ -77,8 +77,8 @@
     [self.server publish];
     XCTestExpectation *expectation3 = [self expectationWithDescription:@"service seen"];
     [[[NSNetService rns_servicesOfType:self.type inDomain:@"local"]
-    takeUntilBlock:^BOOL(RACSequence *_services_) {
-        return _services_.array.count == 1 && [[_services_.head name] isEqualToString:self.name];
+    takeUntilBlock:^BOOL(NSArray *_services_) {
+        return _services_.count == 1 && [[_services_.firstObject name] isEqualToString:self.name];
     }]
     subscribeCompleted:^{
         [expectation3 fulfill];
@@ -88,8 +88,8 @@
     [self.server stop];
     XCTestExpectation *expectation4 = [self expectationWithDescription:@"service removed"];
     [[[NSNetService rns_servicesOfType:self.type inDomain:@"local"]
-    takeUntilBlock:^BOOL(RACSequence *_services_) {
-        return _services_.array.count == 0;
+    takeUntilBlock:^BOOL(NSArray *_services_) {
+        return _services_.count == 0;
     }]
     subscribeCompleted:^{
         [expectation4 fulfill];
@@ -99,16 +99,16 @@
 
 
 - (void)testResolvedServicesOfTypeInDomain {
-    __block RACSequence *services = nil;
+    __block NSArray *services = nil;
 	[[NSNetService rns_resolvedServicesOfType:type inDomain:@"local"]
-    subscribeNext:^(RACSequence *_services_) {
+    subscribeNext:^(NSArray *_services_) {
         services = _services_;
     }];
     
     XCTestExpectation *expectation1 = [self expectationWithDescription:@"service seen"];
     [[[NSNetService rns_resolvedServicesOfType:type inDomain:@"local"]
-    takeUntilBlock:^BOOL(RACSequence *_services_) {
-        return _services_.array.count == 1 && [[_services_.head name] isEqualToString:self.name] && [_services_.head hostName];
+    takeUntilBlock:^BOOL(NSArray *_services_) {
+        return _services_.count == 1 && [[_services_.firstObject name] isEqualToString:self.name] && [_services_.firstObject hostName];
     }]
     subscribeCompleted:^{
         [expectation1 fulfill];
@@ -118,8 +118,8 @@
     [server stop];
     XCTestExpectation *expectation2 = [self expectationWithDescription:@"service removed"];
     [[[NSNetService rns_resolvedServicesOfType:type inDomain:@"local"]
-    takeUntilBlock:^BOOL(RACSequence *_services_) {
-        return _services_.array.count == 0;
+    takeUntilBlock:^BOOL(NSArray *_services_) {
+        return _services_.count == 0;
     }]
     subscribeCompleted:^{
         [expectation2 fulfill];
@@ -129,8 +129,8 @@
     [server publish];
     XCTestExpectation *expectation3 = [self expectationWithDescription:@"service seen"];
     [[[NSNetService rns_resolvedServicesOfType:type inDomain:@"local"]
-    takeUntilBlock:^BOOL(RACSequence *_services_) {
-        return _services_.array.count == 1 && [[_services_.head name] isEqualToString:self.name] && [_services_.head hostName];
+    takeUntilBlock:^BOOL(NSArray *_services_) {
+        return _services_.count == 1 && [[_services_.firstObject name] isEqualToString:self.name] && [_services_.firstObject hostName];
     }]
     subscribeCompleted:^{
         [expectation3 fulfill];
@@ -140,8 +140,8 @@
     [server stop];
     XCTestExpectation *expectation4 = [self expectationWithDescription:@"service removed"];
     [[[NSNetService rns_resolvedServicesOfType:type inDomain:@"local"]
-    takeUntilBlock:^BOOL(RACSequence *_services_) {
-        return _services_.array.count == 0;
+    takeUntilBlock:^BOOL(NSArray *_services_) {
+        return _services_.count == 0;
     }]
     subscribeCompleted:^{
         [expectation4 fulfill];
@@ -150,16 +150,16 @@
 }
 
 - (void)testResolvedServicesWithTXTRecordsOfTypeInDomain {
-    __block RACSequence *services = nil;
+    __block NSArray *services = nil;
 	[[NSNetService rns_resolvedServicesWithTXTRecordsOfType:type inDomain:@"local"]
-    subscribeNext:^(RACSequence *_services_) {
+    subscribeNext:^(NSArray *_services_) {
         services = _services_;
     }];
 
     XCTestExpectation *expectation1 = [self expectationWithDescription:@"service seen"];
     [[[NSNetService rns_resolvedServicesWithTXTRecordsOfType:type inDomain:@"local"]
-    takeUntilBlock:^BOOL(RACSequence *_services_) {
-        return _services_.array.count == 1 && [[_services_.head name] isEqualToString:self.name] && [_services_.head hostName] && [[_services_.head TXTRecordData] isEqual:[NSNetService dataFromTXTRecordDictionary:self.TXTRecord]];
+    takeUntilBlock:^BOOL(NSArray *_services_) {
+        return _services_.count == 1 && [[_services_.firstObject name] isEqualToString:self.name] && [_services_.firstObject hostName] && [[_services_.firstObject TXTRecordData] isEqual:[NSNetService dataFromTXTRecordDictionary:self.TXTRecord]];
     }]
     subscribeCompleted:^{
         [expectation1 fulfill];
@@ -169,8 +169,8 @@
     [server stop];
     XCTestExpectation *expectation2 = [self expectationWithDescription:@"service removed"];
     [[[NSNetService rns_resolvedServicesWithTXTRecordsOfType:type inDomain:@"local"]
-    takeUntilBlock:^BOOL(RACSequence *_services_) {
-        return _services_.array.count == 0;
+    takeUntilBlock:^BOOL(NSArray *_services_) {
+        return _services_.count == 0;
     }]
     subscribeCompleted:^{
         [expectation2 fulfill];
@@ -180,8 +180,8 @@
     [server publish];
     XCTestExpectation *expectation3 = [self expectationWithDescription:@"service seen"];
     [[[NSNetService rns_resolvedServicesWithTXTRecordsOfType:type inDomain:@"local"]
-    takeUntilBlock:^BOOL(RACSequence *_services_) {
-        return _services_.array.count == 1 && [[_services_.head name] isEqualToString:self.name] && [_services_.head hostName] && [[_services_.head TXTRecordData] isEqual:[NSNetService dataFromTXTRecordDictionary:self.TXTRecord]];
+    takeUntilBlock:^BOOL(NSArray *_services_) {
+        return _services_.count == 1 && [[_services_.firstObject name] isEqualToString:self.name] && [_services_.firstObject hostName] && [[_services_.firstObject TXTRecordData] isEqual:[NSNetService dataFromTXTRecordDictionary:self.TXTRecord]];
     }]
     subscribeCompleted:^{
         [expectation3 fulfill];
@@ -191,8 +191,8 @@
     [server stop];
     XCTestExpectation *expectation4 = [self expectationWithDescription:@"service removed"];
     [[[NSNetService rns_resolvedServicesWithTXTRecordsOfType:type inDomain:@"local"]
-    takeUntilBlock:^BOOL(RACSequence *_services_) {
-        return _services_.array.count == 0;
+    takeUntilBlock:^BOOL(NSArray *_services_) {
+        return _services_.count == 0;
     }]
     subscribeCompleted:^{
         [expectation4 fulfill];
