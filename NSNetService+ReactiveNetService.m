@@ -24,9 +24,9 @@ static void *RNSNetServiceTXTRecordDictionaryKey = &RNSNetServiceTXTRecordDictio
 + (RACSignal *)rns_resolvedServicesWithTXTRecordsOfType:(NSString *)type inDomain:(NSString *)domain {
     RACSignal *resolvedServicesWithTXTRecordsSignal = [[[[[self rns_resolvedServicesOfType:type inDomain:domain]
         map:^RACSignal *(NSArray *services) {
-            return [RACSignal combineLatest:services.map(^RACSignal *(NSNetService *service) {
+            return services.count ? [RACSignal combineLatest:services.map(^RACSignal *(NSNetService *service) {
                     return [service rns_lookupTXTRecordSignal];
-                })];
+                })] : [RACSignal return:[RACTuple new]];
         }]
         switchToLatest]
         distinctUntilChanged]
@@ -41,10 +41,10 @@ static void *RNSNetServiceTXTRecordDictionaryKey = &RNSNetServiceTXTRecordDictio
 
 + (RACSignal *)rns_resolvedServicesOfType:(NSString *)type inDomain:(NSString *)domain {
     RACSignal *resolvedServicesSignal = [[[[[self rns_servicesOfType:type inDomain:domain]
-        map:^RACSignal *(NSArray *_services_) {
-            return [RACSignal combineLatest:_services_.map(^RACSignal *(NSNetService *service) {
+        map:^RACSignal *(NSArray *services) {
+            return services.count ? [RACSignal combineLatest:services.map(^RACSignal *(NSNetService *service) {
                     return [service rns_resolutionSignal];
-                })];
+                })] : [RACSignal return:[RACTuple new]];
         }]
         switchToLatest]
         distinctUntilChanged]
