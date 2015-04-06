@@ -108,7 +108,7 @@
     XCTestExpectation *expectation1 = [self expectationWithDescription:@"service seen"];
     [[[NSNetService rns_resolvedServicesOfType:type inDomain:@"local"]
     takeUntilBlock:^BOOL(NSArray *_services_) {
-        return _services_.count == 1 && [[_services_.firstObject name] isEqualToString:self.name] && [_services_.firstObject hostName];
+        return _services_.count == 1 && [[_services_.firstObject name] isEqualToString:self.name] && [_services_.firstObject hostName] && [(NSNetService *)_services_.firstObject port] == 1234;
     }]
     subscribeCompleted:^{
         [expectation1 fulfill];
@@ -130,7 +130,7 @@
     XCTestExpectation *expectation3 = [self expectationWithDescription:@"service seen"];
     [[[NSNetService rns_resolvedServicesOfType:type inDomain:@"local"]
     takeUntilBlock:^BOOL(NSArray *_services_) {
-        return _services_.count == 1 && [[_services_.firstObject name] isEqualToString:self.name] && [_services_.firstObject hostName];
+        return _services_.count == 1 && [[_services_.firstObject name] isEqualToString:self.name] && [_services_.firstObject hostName] && [(NSNetService *)_services_.firstObject port] == 1234;
     }]
     subscribeCompleted:^{
         [expectation3 fulfill];
@@ -159,7 +159,7 @@
     XCTestExpectation *expectation1 = [self expectationWithDescription:@"service seen"];
     [[[NSNetService rns_resolvedServicesWithTXTRecordsOfType:type inDomain:@"local"]
     takeUntilBlock:^BOOL(NSArray *_services_) {
-        return _services_.count == 1 && [[_services_.firstObject name] isEqualToString:self.name] && [_services_.firstObject hostName] && [[_services_.firstObject TXTRecordData] isEqual:[NSNetService dataFromTXTRecordDictionary:self.TXTRecord]];
+        return _services_.count == 1 && [[_services_.firstObject name] isEqualToString:self.name] && [_services_.firstObject hostName] && [[_services_.firstObject TXTRecordData] isEqual:[NSNetService dataFromTXTRecordDictionary:self.TXTRecord]] && [(NSNetService *)_services_.firstObject port] == 1234;
     }]
     subscribeCompleted:^{
         [expectation1 fulfill];
@@ -181,7 +181,7 @@
     XCTestExpectation *expectation3 = [self expectationWithDescription:@"service seen"];
     [[[NSNetService rns_resolvedServicesWithTXTRecordsOfType:type inDomain:@"local"]
     takeUntilBlock:^BOOL(NSArray *_services_) {
-        return _services_.count == 1 && [[_services_.firstObject name] isEqualToString:self.name] && [_services_.firstObject hostName] && [[_services_.firstObject TXTRecordData] isEqual:[NSNetService dataFromTXTRecordDictionary:self.TXTRecord]];
+        return _services_.count == 1 && [[_services_.firstObject name] isEqualToString:self.name] && [_services_.firstObject hostName] && [[_services_.firstObject TXTRecordData] isEqual:[NSNetService dataFromTXTRecordDictionary:self.TXTRecord]] && [(NSNetService *)_services_.firstObject port] == 1234;
     }]
     subscribeCompleted:^{
         [expectation3 fulfill];
