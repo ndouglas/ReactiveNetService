@@ -1,0 +1,1 @@
+REACTIVENETSERVICE_OTHER_LDFLAGS = -framework "Foundation"

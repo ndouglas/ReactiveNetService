@@ -6,6 +6,11 @@ PODS:
   - ReactiveCocoa/no-arc (2.4.7)
   - ReactiveCocoa/UI (2.4.7):
     - ReactiveCocoa/Core
+  - ReactiveNetService (1.0.6):
+    - ReactiveNetService/Core (= 1.0.6)
+  - ReactiveNetService/Core (1.0.6):
+    - ReactiveCocoa
+    - YOLOKit
   - YOLOKit (11.1.2):
     - YOLOKit/all (= 11.1.2)
     - YOLOKit/any (= 11.1.2)
@@ -170,10 +175,16 @@ PODS:
 
 DEPENDENCIES:
   - ReactiveCocoa
+  - ReactiveNetService (from `./`)
   - YOLOKit
 
-SPEC CHECKSUMS:
-  ReactiveCocoa: 313fc53cc9aeb2bbbc3f5f13c7eac16478d9af8f
-  YOLOKit: 8ed261368133b5e948e438aabdff5b145675ea61
+EXTERNAL SOURCES:
+  ReactiveNetService:
+    :path: ./
 
-COCOAPODS: 0.36.0
+SPEC CHECKSUMS:
+  ReactiveCocoa: eb38dee0a0e698f73a9b25e5c1faea2bb4c79240
+  ReactiveNetService: 2b120f302cc14aabb11fdc21280e521d70349156
+  YOLOKit: a71671f20736517996939a99b1c57df62c41c4fa
+
+COCOAPODS: 0.38.2

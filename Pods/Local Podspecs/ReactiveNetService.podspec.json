@@ -1,0 +1,52 @@
+{
+  "name": "ReactiveNetService",
+  "version": "1.0.6",
+  "summary": "Additions to the NSNetService/NSNetServiceBrowser ecosystem for greater interoperability with ReactiveCocoa.",
+  "description": "Additions to the NSNetService/NSNetServiceBrowser ecosystem for greater \ninteroperability with ReactiveCocoa.\n\nThis is largely based on Chris Devereux's ReactiveNetService, but adds \nsome more convenience methods, handles TXT record updates, and so forth. \nI started with Chris' work but spent enough time hacking around issues \nwith my (admittedly strange) usage scenarios that I wanted to create a \ndistinct project rather than pollute his project with my weird edge cases :)",
+  "homepage": "https://github.com/ndouglas/ReactiveNetService",
+  "license": {
+    "type": "Public Domain",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "Nathan Douglas": "ndouglas@devontechnologies.com"
+  },
+  "platforms": {
+    "ios": "7.0",
+    "osx": "10.8"
+  },
+  "source": {
+    "git": "https://github.com/ndouglas/ReactiveNetService.git",
+    "tag": "1.0.6"
+  },
+  "default_subspecs": "Core",
+  "subspecs": [
+    {
+      "name": "Core",
+      "exclude_files": "*.Tests.m",
+      "source_files": "*.{h,m}",
+      "frameworks": "Foundation",
+      "dependencies": {
+        "ReactiveCocoa": [
+
+        ],
+        "YOLOKit": [
+
+        ]
+      }
+    },
+    {
+      "name": "Tests",
+      "source_files": "*.Tests.m",
+      "frameworks": [
+        "Foundation",
+        "XCTest"
+      ],
+      "dependencies": {
+        "ReactiveNetService/Core": [
+
+        ]
+      }
+    }
+  ]
+}
