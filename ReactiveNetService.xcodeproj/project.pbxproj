@@ -23,6 +23,8 @@
 		D869C7C71ACC32BE006D0094 /* RNSNetServiceBrowserDelegate.Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = D869C7B41ACC32A4006D0094 /* RNSNetServiceBrowserDelegate.Tests.m */; };
 		D869C7C81ACC32BE006D0094 /* RNSNetServiceDelegate.Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = D869C7B81ACC32A4006D0094 /* RNSNetServiceDelegate.Tests.m */; };
 		D869C7CA1ACC32D2006D0094 /* ReactiveNetService.h in Headers */ = {isa = PBXBuildFile; fileRef = D869C7C91ACC32D2006D0094 /* ReactiveNetService.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D8E095831B8F9164008A30F6 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = D8E095811B8F9164008A30F6 /* Podfile */; };
+		D8E095841B8F9164008A30F6 /* ReactiveNetService.podspec in Resources */ = {isa = PBXBuildFile; fileRef = D8E095821B8F9164008A30F6 /* ReactiveNetService.podspec */; };
 		FE2AE86342B0B93F11B2E1AD /* libPods-ReactiveNetServiceTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A05308A4978911D64348B9B /* libPods-ReactiveNetServiceTests.a */; };
 /* End PBXBuildFile section */
 
@@ -60,6 +62,8 @@
 		D869C7B71ACC32A4006D0094 /* RNSNetServiceDelegate.Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RNSNetServiceDelegate.Private.h; sourceTree = "<group>"; };
 		D869C7B81ACC32A4006D0094 /* RNSNetServiceDelegate.Tests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RNSNetServiceDelegate.Tests.m; sourceTree = "<group>"; };
 		D869C7C91ACC32D2006D0094 /* ReactiveNetService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReactiveNetService.h; sourceTree = "<group>"; };
+		D8E095811B8F9164008A30F6 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
+		D8E095821B8F9164008A30F6 /* ReactiveNetService.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ReactiveNetService.podspec; sourceTree = "<group>"; };
 		EE3B7A0EDBDDFFA35DF4FE24 /* Pods-ReactiveNetService.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReactiveNetService.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ReactiveNetService/Pods-ReactiveNetService.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -140,6 +144,8 @@
 				D869C7B61ACC32A4006D0094 /* RNSNetServiceDelegate.m */,
 				D869C7B81ACC32A4006D0094 /* RNSNetServiceDelegate.Tests.m */,
 				D869C7C91ACC32D2006D0094 /* ReactiveNetService.h */,
+				D8E095821B8F9164008A30F6 /* ReactiveNetService.podspec */,
+				D8E095811B8F9164008A30F6 /* Podfile */,
 				D869C7A11ACC2CE1006D0094 /* Tests-Info.plist */,
 				D869C7941ACC2CE1006D0094 /* Info.plist */,
 			);
@@ -246,6 +252,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D8E095831B8F9164008A30F6 /* Podfile in Resources */,
+				D8E095841B8F9164008A30F6 /* ReactiveNetService.podspec in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

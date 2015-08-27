@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "CE15F9FD3B10155AE9BDB3D4"
+               BlueprintIdentifier = "617024F20D8EB912ED365A1C"
                BuildableName = "libYOLOKit.a"
                BlueprintName = "YOLOKit"
                ReferencedContainer = "container:Pods.xcodeproj">

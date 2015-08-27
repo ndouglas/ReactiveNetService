@@ -12,6 +12,7 @@
 #import "RNSNetServiceBrowserDelegate.Private.h"
 #import "RNSNetServiceDelegate.Private.h"
 #import <objc/runtime.h>
+#import <YOLOKit/YOLO.h>
 
 static void *RNSNetServiceTXTRecordDictionaryKey = &RNSNetServiceTXTRecordDictionaryKey;
 

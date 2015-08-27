@@ -1,176 +1,176 @@
 PODS:
-  - ReactiveCocoa (2.4.7):
-    - ReactiveCocoa/UI (= 2.4.7)
-  - ReactiveCocoa/Core (2.4.7):
+  - ReactiveCocoa (2.5):
+    - ReactiveCocoa/UI (= 2.5)
+  - ReactiveCocoa/Core (2.5):
     - ReactiveCocoa/no-arc
-  - ReactiveCocoa/no-arc (2.4.7)
-  - ReactiveCocoa/UI (2.4.7):
+  - ReactiveCocoa/no-arc (2.5)
+  - ReactiveCocoa/UI (2.5):
     - ReactiveCocoa/Core
   - ReactiveNetService (1.0.6):
     - ReactiveNetService/Core (= 1.0.6)
   - ReactiveNetService/Core (1.0.6):
     - ReactiveCocoa
     - YOLOKit
-  - YOLOKit (11.1.2):
-    - YOLOKit/all (= 11.1.2)
-    - YOLOKit/any (= 11.1.2)
-    - YOLOKit/array (= 11.1.2)
-    - YOLOKit/base (= 11.1.2)
-    - YOLOKit/chunk (= 11.1.2)
-    - YOLOKit/concat (= 11.1.2)
-    - YOLOKit/dict (= 11.1.2)
-    - YOLOKit/each (= 11.1.2)
-    - YOLOKit/extend (= 11.1.2)
-    - YOLOKit/find (= 11.1.2)
-    - YOLOKit/first (= 11.1.2)
-    - YOLOKit/flatMap (= 11.1.2)
-    - YOLOKit/flatten (= 11.1.2)
-    - YOLOKit/fmap (= 11.1.2)
-    - YOLOKit/get (= 11.1.2)
-    - YOLOKit/groupBy (= 11.1.2)
-    - YOLOKit/has (= 11.1.2)
-    - YOLOKit/indexOf (= 11.1.2)
-    - YOLOKit/inject (= 11.1.2)
-    - YOLOKit/join (= 11.1.2)
-    - YOLOKit/last (= 11.1.2)
-    - YOLOKit/map (= 11.1.2)
-    - YOLOKit/max (= 11.1.2)
-    - YOLOKit/min (= 11.1.2)
-    - YOLOKit/none (= 11.1.2)
-    - YOLOKit/partition (= 11.1.2)
-    - YOLOKit/pick (= 11.1.2)
-    - YOLOKit/pluck (= 11.1.2)
-    - YOLOKit/pmap (= 11.1.2)
-    - YOLOKit/pop (= 11.1.2)
-    - YOLOKit/push (= 11.1.2)
-    - YOLOKit/reduce (= 11.1.2)
-    - YOLOKit/reverse (= 11.1.2)
-    - YOLOKit/rotate (= 11.1.2)
-    - YOLOKit/sample (= 11.1.2)
-    - YOLOKit/select (= 11.1.2)
-    - YOLOKit/shift (= 11.1.2)
-    - YOLOKit/shuffle (= 11.1.2)
-    - YOLOKit/skip (= 11.1.2)
-    - YOLOKit/slice (= 11.1.2)
-    - YOLOKit/snip (= 11.1.2)
-    - YOLOKit/sort (= 11.1.2)
-    - YOLOKit/split (= 11.1.2)
-    - YOLOKit/transpose (= 11.1.2)
-    - YOLOKit/uniq (= 11.1.2)
-    - YOLOKit/unshift (= 11.1.2)
-    - YOLOKit/upTo (= 11.1.2)
-    - YOLOKit/without (= 11.1.2)
-  - YOLOKit/all (11.1.2):
+  - YOLOKit (11.1.3):
+    - YOLOKit/all (= 11.1.3)
+    - YOLOKit/any (= 11.1.3)
+    - YOLOKit/array (= 11.1.3)
+    - YOLOKit/base (= 11.1.3)
+    - YOLOKit/chunk (= 11.1.3)
+    - YOLOKit/concat (= 11.1.3)
+    - YOLOKit/dict (= 11.1.3)
+    - YOLOKit/each (= 11.1.3)
+    - YOLOKit/extend (= 11.1.3)
+    - YOLOKit/find (= 11.1.3)
+    - YOLOKit/first (= 11.1.3)
+    - YOLOKit/flatMap (= 11.1.3)
+    - YOLOKit/flatten (= 11.1.3)
+    - YOLOKit/fmap (= 11.1.3)
+    - YOLOKit/get (= 11.1.3)
+    - YOLOKit/groupBy (= 11.1.3)
+    - YOLOKit/has (= 11.1.3)
+    - YOLOKit/indexOf (= 11.1.3)
+    - YOLOKit/inject (= 11.1.3)
+    - YOLOKit/join (= 11.1.3)
+    - YOLOKit/last (= 11.1.3)
+    - YOLOKit/map (= 11.1.3)
+    - YOLOKit/max (= 11.1.3)
+    - YOLOKit/min (= 11.1.3)
+    - YOLOKit/none (= 11.1.3)
+    - YOLOKit/partition (= 11.1.3)
+    - YOLOKit/pick (= 11.1.3)
+    - YOLOKit/pluck (= 11.1.3)
+    - YOLOKit/pmap (= 11.1.3)
+    - YOLOKit/pop (= 11.1.3)
+    - YOLOKit/push (= 11.1.3)
+    - YOLOKit/reduce (= 11.1.3)
+    - YOLOKit/reverse (= 11.1.3)
+    - YOLOKit/rotate (= 11.1.3)
+    - YOLOKit/sample (= 11.1.3)
+    - YOLOKit/select (= 11.1.3)
+    - YOLOKit/shift (= 11.1.3)
+    - YOLOKit/shuffle (= 11.1.3)
+    - YOLOKit/skip (= 11.1.3)
+    - YOLOKit/slice (= 11.1.3)
+    - YOLOKit/snip (= 11.1.3)
+    - YOLOKit/sort (= 11.1.3)
+    - YOLOKit/split (= 11.1.3)
+    - YOLOKit/transpose (= 11.1.3)
+    - YOLOKit/uniq (= 11.1.3)
+    - YOLOKit/unshift (= 11.1.3)
+    - YOLOKit/upTo (= 11.1.3)
+    - YOLOKit/without (= 11.1.3)
+  - YOLOKit/all (11.1.3):
     - YOLOKit/base
-  - YOLOKit/any (11.1.2):
+  - YOLOKit/any (11.1.3):
     - YOLOKit/base
-  - YOLOKit/array (11.1.2):
+  - YOLOKit/array (11.1.3):
     - YOLOKit/base
-  - YOLOKit/base (11.1.2)
-  - YOLOKit/chunk (11.1.2):
+  - YOLOKit/base (11.1.3)
+  - YOLOKit/chunk (11.1.3):
     - YOLOKit/base
     - YOLOKit/slice
-  - YOLOKit/concat (11.1.2):
+  - YOLOKit/concat (11.1.3):
     - YOLOKit/base
-  - YOLOKit/dict (11.1.2):
+  - YOLOKit/dict (11.1.3):
     - YOLOKit/base
     - YOLOKit/transpose
-  - YOLOKit/each (11.1.2):
+  - YOLOKit/each (11.1.3):
     - YOLOKit/base
-  - YOLOKit/extend (11.1.2):
+  - YOLOKit/extend (11.1.3):
     - YOLOKit/base
-  - YOLOKit/find (11.1.2):
+  - YOLOKit/find (11.1.3):
     - YOLOKit/base
-  - YOLOKit/first (11.1.2):
+  - YOLOKit/first (11.1.3):
     - YOLOKit/base
     - YOLOKit/slice
-  - YOLOKit/flatMap (11.1.2):
+  - YOLOKit/flatMap (11.1.3):
     - YOLOKit/base
-  - YOLOKit/flatten (11.1.2):
+  - YOLOKit/flatten (11.1.3):
     - YOLOKit/base
-  - YOLOKit/fmap (11.1.2):
+  - YOLOKit/fmap (11.1.3):
     - YOLOKit/base
     - YOLOKit/map
-  - YOLOKit/get (11.1.2):
+  - YOLOKit/get (11.1.3):
     - YOLOKit/base
-  - YOLOKit/groupBy (11.1.2):
+  - YOLOKit/groupBy (11.1.3):
     - YOLOKit/base
-  - YOLOKit/has (11.1.2):
+  - YOLOKit/has (11.1.3):
     - YOLOKit/base
-  - YOLOKit/indexOf (11.1.2):
+  - YOLOKit/indexOf (11.1.3):
     - YOLOKit/base
-  - YOLOKit/inject (11.1.2):
+  - YOLOKit/inject (11.1.3):
     - YOLOKit/base
-  - YOLOKit/join (11.1.2):
+  - YOLOKit/join (11.1.3):
     - YOLOKit/base
     - YOLOKit/pluck
-  - YOLOKit/last (11.1.2):
+  - YOLOKit/last (11.1.3):
     - YOLOKit/base
     - YOLOKit/slice
-  - YOLOKit/map (11.1.2):
+  - YOLOKit/map (11.1.3):
     - YOLOKit/base
-  - YOLOKit/max (11.1.2):
+  - YOLOKit/max (11.1.3):
     - YOLOKit/base
-  - YOLOKit/min (11.1.2):
+  - YOLOKit/min (11.1.3):
     - YOLOKit/base
-  - YOLOKit/none (11.1.2):
+  - YOLOKit/none (11.1.3):
     - YOLOKit/base
-  - YOLOKit/partition (11.1.2):
+  - YOLOKit/partition (11.1.3):
     - YOLOKit/base
-  - YOLOKit/pick (11.1.2):
+  - YOLOKit/pick (11.1.3):
     - YOLOKit/base
-  - YOLOKit/pluck (11.1.2):
+  - YOLOKit/pluck (11.1.3):
     - YOLOKit/base
-  - YOLOKit/pmap (11.1.2):
+  - YOLOKit/pmap (11.1.3):
     - YOLOKit/base
-  - YOLOKit/pop (11.1.2):
+  - YOLOKit/pop (11.1.3):
     - YOLOKit/base
-  - YOLOKit/push (11.1.2):
+  - YOLOKit/push (11.1.3):
     - YOLOKit/base
-  - YOLOKit/reduce (11.1.2):
+  - YOLOKit/reduce (11.1.3):
     - YOLOKit/base
     - YOLOKit/last
-  - YOLOKit/reverse (11.1.2):
+  - YOLOKit/reverse (11.1.3):
     - YOLOKit/base
-  - YOLOKit/rotate (11.1.2):
+  - YOLOKit/rotate (11.1.3):
     - YOLOKit/base
     - YOLOKit/concat
     - YOLOKit/skip
     - YOLOKit/snip
-  - YOLOKit/sample (11.1.2):
+  - YOLOKit/sample (11.1.3):
     - YOLOKit/base
-  - YOLOKit/select (11.1.2):
+  - YOLOKit/select (11.1.3):
     - YOLOKit/base
-  - YOLOKit/shift (11.1.2):
+  - YOLOKit/shift (11.1.3):
     - YOLOKit/base
-  - YOLOKit/shuffle (11.1.2):
+  - YOLOKit/shuffle (11.1.3):
     - YOLOKit/base
-  - YOLOKit/skip (11.1.2):
+  - YOLOKit/skip (11.1.3):
     - YOLOKit/base
     - YOLOKit/last
-  - YOLOKit/slice (11.1.2):
+  - YOLOKit/slice (11.1.3):
     - YOLOKit/base
-  - YOLOKit/snip (11.1.2):
+  - YOLOKit/snip (11.1.3):
     - YOLOKit/base
     - YOLOKit/slice
-  - YOLOKit/sort (11.1.2):
+  - YOLOKit/sort (11.1.3):
     - YOLOKit/all
     - YOLOKit/base
     - YOLOKit/transpose
-  - YOLOKit/split (11.1.2):
+  - YOLOKit/split (11.1.3):
     - YOLOKit/base
-  - YOLOKit/transpose (11.1.2):
+  - YOLOKit/transpose (11.1.3):
     - YOLOKit/base
     - YOLOKit/each
     - YOLOKit/max
     - YOLOKit/select
-  - YOLOKit/uniq (11.1.2):
+  - YOLOKit/uniq (11.1.3):
     - YOLOKit/base
-  - YOLOKit/unshift (11.1.2):
+  - YOLOKit/unshift (11.1.3):
     - YOLOKit/base
-  - YOLOKit/upTo (11.1.2):
+  - YOLOKit/upTo (11.1.3):
     - YOLOKit/base
-  - YOLOKit/without (11.1.2):
+  - YOLOKit/without (11.1.3):
     - YOLOKit/base
 
 DEPENDENCIES:
@@ -183,8 +183,8 @@ EXTERNAL SOURCES:
     :path: ./
 
 SPEC CHECKSUMS:
-  ReactiveCocoa: eb38dee0a0e698f73a9b25e5c1faea2bb4c79240
+  ReactiveCocoa: e2db045570aa97c695e7aa97c2bcab222ae51f4a
   ReactiveNetService: 2b120f302cc14aabb11fdc21280e521d70349156
-  YOLOKit: a71671f20736517996939a99b1c57df62c41c4fa
+  YOLOKit: f89d1a0a9a82a83da46b361cc4525d65b3abf1c7
 
 COCOAPODS: 0.38.2
