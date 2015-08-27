@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		986F3DE89CD5A141757DD1A9 /* libPods-ReactiveNetService.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 78A6AB22CFCB5F111131FB78 /* libPods-ReactiveNetService.a */; };
-		D869C79C1ACC2CE1006D0094 /* ReactiveNetService.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D869C7901ACC2CE1006D0094 /* ReactiveNetService.framework */; };
 		D869C7B91ACC32A4006D0094 /* NSNetService+ReactiveNetService.h in Headers */ = {isa = PBXBuildFile; fileRef = D869C7AC1ACC32A4006D0094 /* NSNetService+ReactiveNetService.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D869C7BA1ACC32A4006D0094 /* NSNetService+ReactiveNetService.m in Sources */ = {isa = PBXBuildFile; fileRef = D869C7AD1ACC32A4006D0094 /* NSNetService+ReactiveNetService.m */; };
 		D869C7BC1ACC32A4006D0094 /* RNSDefinitions.h in Headers */ = {isa = PBXBuildFile; fileRef = D869C7AF1ACC32A4006D0094 /* RNSDefinitions.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -80,7 +79,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D869C79C1ACC2CE1006D0094 /* ReactiveNetService.framework in Frameworks */,
 				FE2AE86342B0B93F11B2E1AD /* libPods-ReactiveNetServiceTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
